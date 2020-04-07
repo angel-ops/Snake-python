@@ -25,12 +25,15 @@ def main():
     s = snake(white, (10, 10))
     flag = True    
     clock = pg.time.Clock()
-    
+
     #PARA QUE CORA EL PROGRAMA
     while flag:
         pg.time.delay(50)
         clock.tick(10)
         actualizar_pantalla(screen)
+
+
+#prueba lol
 
 
 
