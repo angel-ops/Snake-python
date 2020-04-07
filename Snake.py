@@ -1,83 +1,46 @@
-<<<<<<< HEAD
-import ramdom
-import pygame as pg
-import math
-import tkinter as tk
-from tkinter import messagebox
+#<<<<<<< HEAD
+import turtle, random, time
 
-#CARARCTERISTICAS DE LA VIBORA
-class snake(object):
-    def _init_(self, color, posicion):
-        pass
+#Marcador
+marcador = 0
+marcador_alto = 0
 
-#redibujar la pantalla 
-def actualizar_pantalla(surface):
-    screen.fill((0,0,0))
-    drawGrids(surface)
-    pg.display.update()
 
-#CORRER EL PROGRAMA EN EL MAIN 
+
+#Configuracion de Pantalla
+def pantalla():
+    tamaño_pantalla =[500, 500] #tamaño de la pantalla
+    ventana = turtle.Screen() #inicializar ventana
+    ventana.title('Snake Game') #nombre de la ventana
+    ventana.setup(tamaño_pantalla) #configurar tamaño de ventana
+    ventana.bgcolor('white')
+    ventana.tracer(0)
+
+def cabeza_serpiente():
+    cabeza = turtle.Turtle()
+    cabeza.speed(0)
+    cabeza.shape('square')
+    cabeza.color('black')
+    cabeza.penup()
+    cabeza.goto(0,0)
+    cabeza.direccion = 'stop'
+
+def comida():
+    comida = turtle.Turtle()
+    comida.speed(0)
+    comida.shape('square')
+    comida.color('red')
+    comida.penup()
+    comida.goto(0,200)
+
+
+
 def main():
-    rojo = (255, 0, 0)
-    white = (255, 255, 255)
-    screen_size = [500, 500]
-    screen = pg.display.set_mode(screen_size)
-    s = snake(white, (10, 10))
-    flag = True    
-    clock = pg.time.Clock()
-
-    #PARA QUE CORA EL PROGRAMA
-    while flag:
-        pg.time.delay(50)
-        clock.tick(10)
-        actualizar_pantalla(screen)
-
-
-#prueba lol
-#segunda prueba
-
-
+    #pantalla()
+    cabeza_serpiente()
+    comida()
+    return
 
 main()
 
-
-=======
-import ramdom
-import pygame as pg
-import math
-import tkinter as tk
-from tkinter import messagebox
-
-
-#CARARCTERISTICAS DE LA VIBORA
-class snake(object):
-    def _init_(self, color, posicion):
-        pass
-
-#redibujar la pantalla 
-def actualizar_pantalla(surface):
-    screen.fill((0,0,0))
-    drawGrids(surface)
-    pg.display.update()
-
-#CORRER EL PROGRAMA EN EL MAIN 
-def main():
-    rojo = (255, 0, 0)
-    white = (255, 255, 255)
-    screen_size = [500, 500]
-    screen = pg.display.set_mode(screen_size)
-    s = snake(white, (10, 10))
-    flag = True    
-    clock = pg.time.Clock()
-
-    while flag:
-        pg.time.delay(50)
-        clock.tick(10)
-        actualizar_pantalla(screen)
-
-
-
-main()
-
-
->>>>>>> 9b486889a3285bbfb68d2c5034c22f3acf8a8024
+#>>>>>>> 9b486889a3285bbfb68d2c5034c22f3acf8a8024
