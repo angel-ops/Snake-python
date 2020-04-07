@@ -6,6 +6,8 @@ import tkinter as tk
 from tkinter import messagebox
 
 
+
+
 #CARARCTERISTICAS DE LA VIBORA
 class snake(object):
     def _init_(self, color, posicion):
