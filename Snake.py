@@ -128,30 +128,31 @@ def pasar_bordes():
         cabeza.home()
         cabeza_direccion = 'stop'
 
-        for colas in cuerpo:
-            colas.goto(1000,1000)
+        for cuerpos in cuerpo:
+            cuerpos.goto(1000,1000)
 
         cuerpo.clear()
 
 def chocar_cuerpo():
     global cabeza_direccion 
-    for colas in cuerpo:
-        if colas.distance(cabeza) < 20:
-            cabeza.home()
-            cabeza_direccion = 'stop'
+    for cuerpos in cuerpo:
+        if cuerpos.distance(cabeza) < 20:
+            cabeza.goto(0,0)
+            #cabeza_direccion = 'stop'
 
-            for colas in cuerpo:
-                colas.goto(1000,1000)
+            for cuerpos in cuerpo:
+                cuerpos.goto(1000,1000)
 
             cuerpo.clear()
 
 while True: 
     ventana.update()
     mover()
-    comer_comida()
-    agregar_cuerpo()
     pasar_bordes()
     chocar_cuerpo()
+    comer_comida()
+    agregar_cuerpo()
+   
     time.sleep(delay)
 
 ventana.mainloop()
