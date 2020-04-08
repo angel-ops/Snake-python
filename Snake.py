@@ -37,13 +37,13 @@ comida.goto(0,100)
 cuerpo = [] #lista cuerpo para agregar los segmentos de la vivora
 
 #CONFIGURACION DEL MARCADOR
-#marcador = turtle.Turtle()
-#marcador.shape()
-#marcador.color('white')
-#marcador.penup()
-#marcador.hideturtle()
-#marcador.goto(0,230)
-#marcador.write('Marcador: 0    Marcador mas alto: 0 ,align = 'center', font = ('Courier', 20, 'normal'))
+marcador = turtle.Turtle()
+marcador.shape('square')
+marcador.color('white')
+marcador.penup()
+marcador.hideturtle()
+marcador.goto(0,230)
+marcador.write('Marcador: 0    Marcador mas alto: 0' ,align = 'center', font = ('Courier', 20, 'normal'))
 
 #mover la serpiente
 #fundiones
