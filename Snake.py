@@ -20,7 +20,7 @@ ventana.tracer(0) #replica del screen
 #cabeza de la serpiente
 cabeza = turtle.Turtle() #inicio de la tortuga
 cabeza.shape('square') #forma de la cabeza
-cabeza.color('black')  #color de la cabeza
+cabeza.color('red')  #color de la cabeza
 cabeza.shapesize(tamano_cuerpo,tamano_cuerpo) #tamaño del cuerpo
 cabeza.penup() #levantar el lapiz
 cabeza.home() #home lo manda a las coordenadad (0,0)
@@ -29,7 +29,7 @@ cabeza_direccion = 'stop'
 #CINFIGURACION DE LA COMIDA
 comida = turtle.Turtle()
 comida.shape('square')
-comida.color('red')
+comida.color('black')
 comida.shapesize(tamano_cuerpo,tamano_cuerpo)
 comida.penup()
 comida.goto(0,100)
@@ -102,7 +102,7 @@ def comer_comida():
         #configuración de la cola o cuerpo
         cola = turtle.Turtle()
         cola.shape('square')
-        cola.color('black')
+        cola.color('red')
         cola.shapesize(tamano_cuerpo,tamano_cuerpo)
         cola.penup()
         cuerpo.append(cola)
